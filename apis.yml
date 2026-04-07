@@ -6,10 +6,10 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Agile Methodology
-  - Project Management
-  - Software Development
-  - Scrum
   - Kanban
+  - Project Management
+  - Scrum
+  - Software Development
 description: >-
   An iterative approach to software development and project management that
   emphasizes flexibility, collaboration, and customer feedback. Agile
