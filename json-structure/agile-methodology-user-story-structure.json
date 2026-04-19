@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/agile-methodology/refs/heads/main/json-structure/agile-methodology-user-story-structure.json",
+  "name": "UserStory",
+  "description": "A user story representing a feature or requirement from the perspective of an end user in agile methodology.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the user story.",
+      "example": "US-500123"
+    },
+    "title": {
+      "type": "string",
+      "description": "Short summary of the user story.",
+      "example": "User can reset password via email"
+    },
+    "description": {
+      "type": "string",
+      "description": "Full user story in the format: As a [role], I want [feature], so that [benefit].",
+      "example": "As a registered user, I want to reset my password via email, so that I can regain access if I forget it."
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of acceptance criteria that must be met for the story to be considered done."
+    },
+    "story_points": {
+      "type": "int32",
+      "description": "Relative effort estimate for completing the user story.",
+      "example": 5
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ],
+      "example": "high"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "backlog",
+        "ready",
+        "in-progress",
+        "done"
+      ],
+      "example": "in-progress"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "description"
+  ]
+}

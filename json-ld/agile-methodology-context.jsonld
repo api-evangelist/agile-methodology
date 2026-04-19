@@ -1,0 +1,36 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "ameth": "https://api-evangelist.github.io/agile-methodology/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "UserStory": "ameth:UserStory",
+    "id": {
+      "@id": "dcterms:identifier",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "description": "schema:description",
+    "acceptance_criteria": {
+      "@id": "ameth:acceptance_criteria",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "story_points": {
+      "@id": "ameth:story_points",
+      "@type": "xsd:integer"
+    },
+    "priority": {
+      "@id": "ameth:priority",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "ameth:status",
+      "@type": "xsd:string"
+    }
+  }
+}

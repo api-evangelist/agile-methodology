@@ -1,0 +1,42 @@
+vocabulary: "1.0.0"
+info:
+  provider: Agile Methodology
+  description: Vocabulary for agile methodology including Scrum, Kanban, SAFe, and XP frameworks.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  resources:
+    - name: user-stories
+      description: Feature requirements expressed from a user perspective
+      actions: [create, estimate, prioritize, complete]
+    - name: ceremonies
+      description: Agile team ceremonies including standups, planning, and retrospectives
+      actions: [schedule, facilitate, record]
+    - name: frameworks
+      description: Agile methodology frameworks (Scrum, Kanban, SAFe, XP)
+      actions: [adopt, configure, measure]
+  schemas:
+    core:
+      - name: UserStory
+        description: A requirement from an end user's perspective
+        properties: [id, title, description, acceptance_criteria, story_points, priority, status]
+  enums:
+    priority: [critical, high, medium, low]
+    status: [backlog, ready, in-progress, done]
+    frameworks: [Scrum, Kanban, SAFe, XP, LeSS, DSDM]
+capability:
+  workflows:
+    - name: User Story Lifecycle
+      description: Create, estimate, and deliver a user story through an agile sprint
+      personas: [Product Owner, Developer]
+      domains: [Agile Methodology]
+  personas:
+    - id: product-owner
+      name: Product Owner
+      description: Defines and prioritizes the product backlog from a user and business perspective
+    - id: developer
+      name: Developer
+      description: Implements user stories following agile methodology practices
+  domains:
+    - name: Agile Methodology
+      description: The set of principles, frameworks, and practices for iterative software development
